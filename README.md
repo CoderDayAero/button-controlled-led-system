@@ -4,27 +4,23 @@
 
 This project uses an Arduino Uno, a pushbutton, and an LED to create a button-controlled lighting system. When the button is pressed, the Arduino reads the input and turns the LED on. When the button is released, the LED turns off. I built this to practice working with digital inputs, digital outputs, breadboard wiring, and basic Arduino programming.
 
----
 
 ## Components Used
 
 - Arduino Uno R3
 - Breadboard
-- LED
+- (1)red LED
 - 220Ω resistor
 - Pushbutton
 - 10kΩ resistor (pull-down resistor)
-- Jumper wires
-- USB cable
+- (4)Jumper wires
 - Arduino IDE
 
----
 
 ## How It Works
 
 The pushbutton is connected to digital pin **D2**, and the LED is connected to digital pin **D9**. A 10kΩ pull-down resistor keeps the button input LOW when it is not being pressed. When the button is pressed, 5V is sent to D2, causing the Arduino to detect a HIGH signal and turn the LED on. Releasing the button returns the input to LOW, turning the LED off.
 
----
 
 ## Challenges I Faced
 
@@ -35,7 +31,6 @@ The pushbutton is connected to digital pin **D2**, and the LED is connected to d
 
 My biggest problem was the pushbutton wiring. I didnt notice until later that the wiring on either side of the button was on the same row and it only worked until i moved one. This caused the control board to constantly read a HIGH signal since D2 and and 5V were connected and essentially bypassing the button entirely causing it to do nothing.
 
----
 
 ## How I Solved It
 
@@ -43,7 +38,6 @@ I found out about the LED issue by testing each part of the circuit individually
 
 For the short resistor leg issue i found that i could solve it by simply using a jumper wire to connect it to GND while still keeping the resistor in use by just having both ends of it in the same row as the short leg.
 
----
 
 ## What I Learned
 
@@ -53,7 +47,6 @@ For the short resistor leg issue i found that i could solve it by simply using a
 - How to control an LED using a pushbutton
 - The importance of debugging one problem at a time instead of guessing
 
----
 
 ## Future Improvements
 
